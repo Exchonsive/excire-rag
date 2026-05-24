@@ -14,19 +14,26 @@ from datetime import datetime, timezone
 # ── RSS FEED SOURCES ─────────────────────────────────────────
 RSS_FEEDS = {
     "cnn_indonesia": [
-        "https://www.cnnindonesia.com/nasional/rss",
+        "https://www.cnnindonesia.com/rss",
+        "https://www.cnnindonesia.com/nasional/rss/",
         "https://www.cnnindonesia.com/teknologi/rss",
         "https://www.cnnindonesia.com/politik/rss",
-    ],
-    "kompas": [
-        "https://rss.kompas.com/nasional",
-        "https://rss.kompas.com/tren",
-        "https://rss.kompas.com/regional",
     ],
     "tempo": [
         "https://rss.tempo.co/nasional",
         "https://rss.tempo.co/politik",
         "https://rss.tempo.co/hukum",
+    ],
+    "detik": [
+        "https://rss.detik.com/index.php/detikcom",
+        "https://rss.detik.com/index.php/news",
+    ],
+    "republika": [
+        "https://www.republika.co.id/rss",
+    ],
+    "antara": [
+        "https://www.antaranews.com/rss/terkini.xml",
+        "https://www.antaranews.com/rss/nasional.xml",
     ],
 }
 
