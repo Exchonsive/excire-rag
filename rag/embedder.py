@@ -6,15 +6,15 @@
 
 import os
 import time
-from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone, ServerlessSpec
 from scraper import scrape_all_feeds
 
-load_dotenv()
-
 # ── CONFIG ───────────────────────────────────────────────────
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+try:
+    PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
+except:
+    PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX   = os.getenv("PINECONE_INDEX", "excire-knowledge-base")
 EMBED_MODEL      = "paraphrase-multilingual-MiniLM-L12-v2"
 EMBED_DIM        = 768
