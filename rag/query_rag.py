@@ -16,6 +16,7 @@ except:
     PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX   = os.getenv("PINECONE_INDEX", "excire-knowledge-base")
 EMBED_MODEL      = "paraphrase-multilingual-MiniLM-L12-v2"
+EMBED_DIM        = 384
 TOP_K            = 5     # ambil 5 berita paling relevan
 MIN_SCORE        = 0.45  # threshold cosine similarity
 
